@@ -1,0 +1,70 @@
+2025-10-01 15:14:43,524 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-10-01 15:14:43,554 INFO o.a.j.JMeter: Loading user properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2025-10-01 15:14:43,555 INFO o.a.j.JMeter: Loading system properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2025-10-01 15:14:43,555 INFO o.a.j.JMeter: Setting JMeter property: jmeter.save.saveservice.response_data=true
+2025-10-01 15:14:43,555 INFO o.a.j.JMeter: Setting JMeter property: expected_throughput_per_min=20
+2025-10-01 15:14:43,555 INFO o.a.j.JMeter: Setting JMeter property: error_hard_limit=5
+2025-10-01 15:14:43,555 INFO o.a.j.JMeter: Setting JMeter property: throughput_tolerance=0.05
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: Version 5.6.3
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: java.version=21.0.2
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: os.name=Mac OS X
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: os.arch=aarch64
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: os.version=14.4.1
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: java.awt.headless=true
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-10-01 15:14:43,558 INFO o.a.j.JMeter: Available Processors =8
+2025-10-01 15:14:43,564 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-10-01 15:14:43,564 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-10-01 15:14:43,564 INFO o.a.j.JMeter: JMeterHome=/opt/homebrew/Cellar/jmeter/5.6.3/libexec
+2025-10-01 15:14:43,564 INFO o.a.j.JMeter: user.dir  =/Users/yuanjiexia/PycharmProjects/workloadConfig/jmeter_file
+2025-10-01 15:14:43,564 INFO o.a.j.JMeter: PWD       =/Users/yuanjiexia/PycharmProjects/workloadConfig/jmeter_file
+2025-10-01 15:14:43,585 INFO o.a.j.JMeter: IP: 10.36.156.19 Name: Yuanjies-MacBook-Air.local FullName: 10.36.156.19
+2025-10-01 15:14:43,593 INFO o.a.j.s.FileServer: Default base='/Users/yuanjiexia/PycharmProjects/workloadConfig/jmeter_file'
+2025-10-01 15:14:43,594 INFO o.a.j.s.FileServer: Set new base='/Users/yuanjiexia/PycharmProjects/workloadConfig/jmeter_file'
+2025-10-01 15:14:43,687 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-10-01 15:14:43,712 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-10-01 15:14:43,713 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-10-01 15:14:43,714 INFO o.a.j.s.SaveService: Loading file: teastore.jmx
+2025-10-01 15:14:43,779 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-10-01 15:14:43,779 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-10-01 15:14:43,780 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-10-01 15:14:43,780 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-10-01 15:14:43,780 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-10-01 15:14:43,780 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-10-01 15:14:43,807 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-10-01 15:14:43,814 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-10-01 15:14:43,814 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-10-01 15:14:43,814 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-10-01 15:14:43,816 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-10-01 15:14:43,816 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-10-01 15:14:43,839 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-10-01 15:14:44,114 INFO o.a.j.JMeter: Running test (1759346084114)
+2025-10-01 15:14:44,125 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2025-10-01 15:14:44,125 INFO o.a.j.e.StandardJMeterEngine: Starting 6 threads for group Thread Group.
+2025-10-01 15:14:44,125 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-10-01 15:14:44,125 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=6 ramp-up=0 delayedStart=false
+2025-10-01 15:14:44,129 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2025-10-01 15:14:44,129 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
+2025-10-01 15:14:44,129 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2025-10-01 15:14:44,130 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-10-01 15:14:44,130 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-10-01 15:14:44,130 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-10-01 15:14:44,130 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-10-01 15:14:44,130 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
+2025-10-01 15:14:44,130 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-10-01 15:14:44,130 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-10-01 15:14:44,131 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-5
+2025-10-01 15:14:44,131 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-6
+2025-10-01 15:14:44,501 INFO o.a.j.p.j.s.J.JSR223 Sampler: Picked route index=4, name=URL5, r=0.7671431865379366
+2025-10-01 15:14:44,501 INFO o.a.j.p.j.s.J.JSR223 Sampler: Picked route index=5, name=URL6, r=0.9484076188311573
+2025-10-01 15:14:44,501 INFO o.a.j.p.j.s.J.JSR223 Sampler: Picked route index=5, name=URL6, r=0.9473652314148936
+2025-10-01 15:14:44,501 INFO o.a.j.p.j.s.J.JSR223 Sampler: Picked route index=2, name=URL3, r=0.5605874396673222
+2025-10-01 15:14:44,501 INFO o.a.j.p.j.s.J.JSR223 Sampler: Picked route index=0, name=URL1, r=0.2686185064896911
+2025-10-01 15:14:44,501 INFO o.a.j.p.j.s.J.JSR223 Sampler: Picked route index=0, name=URL1, r=0.09198874085568154
+2025-10-01 15:14:44,715 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Yuanjies-MacBook-Air.local
+2025-10-01 15:14:44,718 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-10-01 15:15:41,916 INFO o.a.j.r.ResultCollector: Shutdown hook started
+2025-10-01 15:15:41,920 INFO o.a.j.r.ResultCollector: Shutdown hook ended
