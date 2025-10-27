@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepperf-torch"
+version = "0.1.0"
+description = "DeepPerf-style sparse MLP regressor with an sklearn-like API (PyTorch) From Huong Ha"
+authors = [{name = "Roger Xia"}]
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24",
+  "scikit-learn>=1.2",
+  "torch>=2.0",
+]
