@@ -1,0 +1,82 @@
+{
+  "gateway-aggregator": {
+    "__comment": "This service is not created by the K8s builder, instead a custom service is deployed. TODO: add parameter that runs the command to load / unload this automatically; i.e., integrate the custom service into the pipeline.",
+    "is_generated": false,
+    "url": "gateway-aggregator.default.svc.cluster.local",
+    "path": "/api/v1"
+  },
+  "s1": {
+    "request_type_dependent_internal_service": true,
+    "internal_service": {
+      "s3_intensive": {
+        "config_tester": {
+          "lrzip": {
+            "run": true,
+            "algorithm": "-b",
+            "level": 9,
+            "window": 7,
+            "nice": 0,
+            "processor": 1
+          }
+        }
+      }
+    },
+    "request_method": "rest",
+    "workers": 9,
+    "threads": 128,
+    "url": "s1.default.svc.cluster.local",
+    "path": "/api/v1",
+    "image": "loongspeed/lrzip-test:latest",
+    "namespace": "default"
+  },
+  "s2": {
+    "request_type_dependent_internal_service": true,
+    "internal_service": {
+      "s3_intensive": {
+        "config_tester": {
+          "ffmpeg": {
+            "run": true,
+            "input_file": "/app/akiyo_cif.y4m",
+            "output_file": "/app/output_video.mp4",
+            "codec": "libx264",
+            "crf": 20,
+            "preset": "medium"
+          }
+        }
+      }
+    },
+    "request_method": "rest",
+    "workers": 9,
+    "threads": 128,
+    "url": "s2.default.svc.cluster.local",
+    "path": "/api/v1",
+    "image": "loongspeed/ffmpeg-test:latest",
+    "namespace": "default"
+  },
+  "s3": {
+    "request_type_dependent_internal_service": true,
+    "internal_service": {
+      "s3_intensive": {
+        "config_tester": {
+          "sqlite": {
+            "run": true,
+            "cache_size": "4000",
+            "page_size": "1024",
+            "autovacuum": true,
+            "exclusive": false,
+            "journal_mode": "WAL",
+            "nosync": false,
+            "stats": true
+          }
+        }
+      }
+    },
+    "request_method": "rest",
+    "workers": 9,
+    "threads": 128,
+    "url": "s3.default.svc.cluster.local",
+    "path": "/api/v1",
+    "image": "loongspeed/sqlite-test:latest",
+    "namespace": "default"
+  }
+}

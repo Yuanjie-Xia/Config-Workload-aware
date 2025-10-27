@@ -1,0 +1,292 @@
+{
+  "s5": {
+    "request_type_dependent_external_service": true,
+    "request_type_dependent_internal_service": true,
+    "internal_service": {
+      "url_1": {
+        "config_tester": {
+          "lrzip": {
+            "run": true,
+            "algorithm": "-b",
+            "level": 9,
+            "window": 7,
+            "nice": 0,
+            "processor": 1
+          },
+          "mean_bandwidth": 2
+        }
+      }
+    },
+    "external_services": {
+      "url_1": [
+        {
+          "seq_len": 1,
+          "probabilities": {
+            "s6": 1
+          },
+          "services": [
+            "s6"
+          ]
+        }
+      ]
+    },
+    "request_method": "rest",
+    "workers": 1,
+    "threads": 1,
+    "url": "s5.train.svc.cluster.local",
+    "path": "/api/v1",
+    "image": "loongspeed/ffmpeg-test:mp-mix-lrzip-1",
+    "namespace": "train"
+  },
+  "s6": {
+    "request_type_dependent_external_service": true,
+    "request_type_dependent_internal_service": true,
+    "internal_service": {
+      "url_1": {
+        "config_tester": {
+          "ffmpeg": {
+            "run": true,
+            "input_file": "/app/akiyo_cif.y4m",
+            "output_file": "/app/output_video.mp4",
+            "codec": "libx264",
+            "crf": 20,
+            "preset": "medium"
+          },
+          "mean_bandwidth": 2
+        }
+      },
+      "url_4": {
+        "config_tester": {
+          "lrzip": {
+            "run": true,
+            "algorithm": "-b",
+            "level": 9,
+            "window": 7,
+            "nice": 0,
+            "processor": 1
+          },
+          "mean_bandwidth": 2
+        }
+      }
+    },
+    "external_services": {
+    },
+    "request_method": "rest",
+    "workers": 1,
+    "threads": 1,
+    "url": "s6.train.svc.cluster.local",
+    "path": "/api/v1",
+    "image": "loongspeed/ffmpeg-test:mp-mix-lrzip-1",
+    "namespace": "train"
+  },
+  "s7": {
+    "request_type_dependent_external_service": true,
+    "request_type_dependent_internal_service": true,
+    "internal_service": {
+      "url_2":{
+        "config_tester": {
+          "lrzip": {
+            "run": true,
+            "algorithm": "-b",
+            "level": 9,
+            "window": 7,
+            "nice": 0,
+            "processor": 1
+          },
+          "mean_bandwidth": 2
+        }
+      },
+      "url_3":{
+        "config_tester": {
+          "ffmpeg": {
+            "run": true,
+            "input_file": "/app/akiyo_cif.y4m",
+            "output_file": "/app/output_video.mp4",
+            "codec": "libx264",
+            "crf": 20,
+            "preset": "medium"
+          },
+          "mean_bandwidth": 2
+        }
+      }
+    },
+    "external_services": {
+      "url_2": [
+        {
+          "seq_len": 1,
+          "probabilities": {
+            "s8": 1
+          },
+          "services": [
+            "s8"
+          ]
+        }
+      ],
+      "url_3": [
+        {
+          "seq_len": 1,
+          "probabilities": {
+            "s8": 1
+          },
+          "services": [
+            "s8"
+          ]
+        }
+      ]
+    },
+    "request_method": "rest",
+    "workers": 1,
+    "threads": 1,
+    "url": "s7.train.svc.cluster.local",
+    "path": "/api/v1",
+    "image": "loongspeed/ffmpeg-test:mp-mix-lrzip-1",
+    "namespace": "train"
+  },
+  "s8": {
+    "request_type_dependent_external_service": true,
+    "request_type_dependent_internal_service": true,
+    "internal_service": {
+      "url_2": {
+        "config_tester": {
+          "ffmpeg": {
+            "run": true,
+            "input_file": "/app/akiyo_cif.y4m",
+            "output_file": "/app/output_video.mp4",
+            "codec": "libx264",
+            "crf": 20,
+            "preset": "medium"
+          },
+          "mean_bandwidth": 2
+        }
+      },
+      "url_3": {
+        "config_tester": {
+          "lrzip": {
+            "run": true,
+            "algorithm": "-b",
+            "level": 9,
+            "window": 7,
+            "nice": 0,
+            "processor": 1
+          },
+          "mean_bandwidth": 2
+        }
+      }
+    },
+    "external_services": {
+    },
+    "request_method": "rest",
+    "workers": 1,
+    "threads": 1,
+    "url": "s8.train.svc.cluster.local",
+    "path": "/api/v1",
+    "image": "loongspeed/ffmpeg-test:mp-mix-lrzip-1",
+    "namespace": "train"
+  },
+  "s9": {
+    "request_type_dependent_external_service": true,
+    "request_type_dependent_internal_service": true,
+    "internal_service": {
+      "url_5": {
+        "config_tester": {
+          "lrzip": {
+            "run": true,
+            "algorithm": "-b",
+            "level": 9,
+            "window": 7,
+            "nice": 0,
+            "processor": 1
+          },
+          "mean_bandwidth": 2
+        }
+      },
+      "url_6": {
+        "config_tester": {
+          "ffmpeg": {
+            "run": true,
+            "input_file": "/app/akiyo_cif.y4m",
+            "output_file": "/app/output_video.mp4",
+            "codec": "libx264",
+            "crf": 20,
+            "preset": "medium"
+          },
+          "mean_bandwidth": 2
+        }
+      },
+      "ffmpeg_test_only": {
+        "config_tester": {
+          "ffmpeg": {
+            "run": true,
+            "input_file": "/app/akiyo_cif.y4m",
+            "output_file": "/app/output_video.mp4",
+            "codec": "libx264",
+            "crf": 20,
+            "preset": "medium"
+          },
+          "mean_bandwidth": 2
+        }
+      },
+      "lrzip_test_only": {
+        "config_tester": {
+          "lrzip": {
+            "run": true,
+            "algorithm": "-b",
+            "level": 9,
+            "window": 7,
+            "nice": 0,
+            "processor": 1
+          },
+          "mean_bandwidth": 2
+        }
+      }
+    },
+    "external_services": {
+    },
+    "request_method": "rest",
+    "workers": 1,
+    "threads": 1,
+    "url": "s9.train.svc.cluster.local",
+    "path": "/api/v1",
+    "image": "loongspeed/ffmpeg-test:mp-mix-lrzip-1",
+    "namespace": "train"
+  },
+  "s10": {
+    "request_type_dependent_external_service": true,
+    "request_type_dependent_internal_service": true,
+    "internal_service": {
+      "url_6": {
+        "config_tester": {
+          "ffmpeg": {
+            "run": true,
+            "input_file": "/app/akiyo_cif.y4m",
+            "output_file": "/app/output_video.mp4",
+            "codec": "libx264",
+            "crf": 20,
+            "preset": "medium"
+          },
+          "mean_bandwidth": 2
+        }
+      }
+    },
+    "external_services": {
+      "url_6": [
+        {
+          "seq_len": 1,
+          "probabilities": {
+            "s9": 1
+          },
+          "services": [
+            "s9"
+          ]
+        }
+      ]
+    },
+    "request_method": "rest",
+    "workers": 1,
+    "threads": 1,
+    "url": "s10.train.svc.cluster.local",
+    "path": "/api/v1",
+    "image": "loongspeed/ffmpeg-test:mp-mix-lrzip-1",
+    "namespace": "train"
+  }
+}

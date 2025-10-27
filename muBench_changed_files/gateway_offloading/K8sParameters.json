@@ -1,0 +1,15 @@
+{
+   "K8sParameters": {
+      "prefix_yaml_file":"MicroServiceDeployment",
+      "namespace": "default",
+      "image": {
+         "Other": "loongspeed/microservice_v4-screen:latest"
+      },
+      "cluster_domain": "cluster",
+      "path": "/api/v1",
+      "sleep": 1
+   },
+   "InternalServiceFilePath": "CustomFunctions",
+   "OutputPath": "SimulationWorkspace",
+   "WorkModelPath": "./gssi_experiment/gateway_offloading/WorkModel.json.tmp"
+}

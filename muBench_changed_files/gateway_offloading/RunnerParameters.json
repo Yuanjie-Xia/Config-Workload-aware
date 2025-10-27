@@ -1,0 +1,31 @@
+{
+    "RunnerParameters": {
+        "ms_access_gateway": "http://90.147.115.229:31113",
+        "workload_files_path_list": [
+            "SimulationWorkspace/workload.json"
+        ],
+        "workload_rounds": 1,
+        "workload_type": "timely_greedy",
+        "max_runner_time_in_minutes": 10,
+        "workload_events": 60000,
+        "thread_pool_size": 16,
+        "result_file": "result",
+        "ingress_service": "gw",
+        "HeaderParameters": [
+            {
+                "type": "RequestTypeHeaderFactory",
+                "parameters": {
+                    "request_types": [
+                        "dashboard",
+                        "monitoring"
+                    ],
+                    "probabilities": [
+                        1.0,
+                        0.0
+                    ]
+                }
+            }
+        ]
+    },
+    "OutputPath": "SimulationWorkspace/Result"
+}
