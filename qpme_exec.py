@@ -201,6 +201,32 @@ def qpme_running(_change_element_set, _qpme_file_location="./qpme/teastore_model
     return _ranked_list, _mean_st_list
 
 
+def change_qpme(mean_list, elements, frequency):
+    change_list = []
+    for i, element in enumerate(elements):
+        if element == "Workload":
+            # pred_mean = random.choice([0.8, 12, 15, 20, 30, 60, 100])
+            # pred_mean = 4
+            # frequency = 15
+            change_list.append({
+                "element": element,
+                "frequency": f"{frequency}",
+                # "mean": f"{pred_mean}",
+                "mean": f"{(60 / frequency):.4f}",
+                # "std": f"{(pred_mean/100):.4f}"
+                "std": f"{(6 / frequency):4f}"
+            })
+        else:
+            pred_mean = mean_list[i - 1]
+            pred_std = f"{(pred_mean / 100):.4f}"
+            change_list.append({
+                "element": element,
+                "mean": f"{pred_mean:.4f}",
+                "std": str(pred_std)
+            })
+    return change_list
+
+
 if __name__ == '__main__':
     _change_element_set_list = [
         {

@@ -6,9 +6,9 @@ import statistics
 import numpy as np
 
 from collections import defaultdict
-from single_pod_model import encode_config
+from single_pod_model import encode_config, qpme_running
 from workload_file_modifier import TestCases
-from analysis_spike import change_qpme, qpme_running
+from qpme_exec import change_qpme
 
 _request_element_list = ["Workload", "W/index", "W/login", "W/loginAction", "W/category", "W/product", "W/logout",
                          "P/categories_index", "P/categories_login", "A/login_loginAction", "P/category_category",
